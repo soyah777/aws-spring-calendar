@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ngen.calendar02.Calendar02ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-30T08:13:50" hostname="N-2024-PC-A22.local" time="0.35">
+<testsuite name="ngen.calendar02.Calendar02ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-30T12:36:39" hostname="N-2024-PC-A22.local" time="0.344">
   <properties/>
-  <testcase name="contextLoads()" classname="ngen.calendar02.Calendar02ApplicationTests" time="0.35"/>
-  <system-out><![CDATA[17:13:48.480 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ngen.calendar02.Calendar02ApplicationTests]: Calendar02ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:13:48.515 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ngen.calendar02.Calendar02Application for test class ngen.calendar02.Calendar02ApplicationTests
+  <testcase name="contextLoads()" classname="ngen.calendar02.Calendar02ApplicationTests" time="0.344"/>
+  <system-out><![CDATA[21:36:36.295 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ngen.calendar02.Calendar02ApplicationTests]: Calendar02ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:36:36.330 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ngen.calendar02.Calendar02Application for test class ngen.calendar02.Calendar02ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,24 +14,24 @@
 
  :: Spring Boot ::                (v3.4.2)
 
-2025-03-30T17:13:48.623+09:00  INFO 27153 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : Starting Calendar02ApplicationTests using Java 23.0.1 with PID 27153 (started by user in /Users/user/CLONE/aws-spring-calendar)
-2025-03-30T17:13:48.624+09:00  INFO 27153 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2025-03-30T17:13:48.810+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
-2025-03-30T17:13:48.810+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'ngen.calendar02'
-2025-03-30T17:13:48.844+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [/Users/user/CLONE/aws-spring-calendar/build/classes/java/main/ngen/calendar02/repository/UserMapper.class]
-2025-03-30T17:13:48.845+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'userMapper' and 'ngen.calendar02.repository.UserMapper' mapperInterface
-2025-03-30T17:13:48.980+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'file [/Users/user/CLONE/aws-spring-calendar/build/resources/main/mapper/UserMapper.xml]'
-2025-03-30T17:13:49.065+09:00  INFO 27153 --- [calendar02] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name loginUserService
-2025-03-30T17:13:49.182+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
-2025-03-30T17:13:49.246+09:00 ERROR 27153 --- [calendar02] [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
-2025-03-30T17:13:49.253+09:00  INFO 27153 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : Started Calendar02ApplicationTests in 0.702 seconds (process running for 1.061)
-2025-03-30T17:13:49.258+09:00 DEBUG 27153 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : Creating a new SqlSession
-2025-03-30T17:13:49.259+09:00 DEBUG 27153 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cacb445] was not registered for synchronization because synchronization is not active
-2025-03-30T17:13:49.263+09:00  INFO 27153 --- [calendar02] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-30T17:13:50.760+09:00  INFO 27153 --- [calendar02] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4910afdf
-2025-03-30T17:13:50.761+09:00  INFO 27153 --- [calendar02] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-30T17:13:50.765+09:00 DEBUG 27153 --- [calendar02] [    Test worker] o.m.s.t.SpringManagedTransaction         : JDBC Connection [HikariProxyConnection@711750943 wrapping org.postgresql.jdbc.PgConnection@4910afdf] will not be managed by Spring
-2025-03-30T17:13:50.933+09:00 DEBUG 27153 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cacb445]
+2025-03-30T21:36:36.438+09:00  INFO 32708 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : Starting Calendar02ApplicationTests using Java 23.0.1 with PID 32708 (started by user in /Users/user/CLONE/aws-spring-calendar)
+2025-03-30T21:36:36.438+09:00  INFO 32708 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-03-30T21:36:36.613+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2025-03-30T21:36:36.613+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'ngen.calendar02'
+2025-03-30T21:36:36.646+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [/Users/user/CLONE/aws-spring-calendar/build/classes/java/main/ngen/calendar02/repository/UserMapper.class]
+2025-03-30T21:36:36.655+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'userMapper' and 'ngen.calendar02.repository.UserMapper' mapperInterface
+2025-03-30T21:36:36.792+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'file [/Users/user/CLONE/aws-spring-calendar/build/resources/main/mapper/UserMapper.xml]'
+2025-03-30T21:36:36.880+09:00  INFO 32708 --- [calendar02] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name loginUserService
+2025-03-30T21:36:36.997+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-03-30T21:36:37.061+09:00 ERROR 32708 --- [calendar02] [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-03-30T21:36:37.068+09:00  INFO 32708 --- [calendar02] [    Test worker] n.calendar02.Calendar02ApplicationTests  : Started Calendar02ApplicationTests in 0.699 seconds (process running for 1.053)
+2025-03-30T21:36:37.070+09:00 DEBUG 32708 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : Creating a new SqlSession
+2025-03-30T21:36:37.071+09:00 DEBUG 32708 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e7cfd49] was not registered for synchronization because synchronization is not active
+2025-03-30T21:36:37.073+09:00  INFO 32708 --- [calendar02] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-30T21:36:38.956+09:00  INFO 32708 --- [calendar02] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@764db16c
+2025-03-30T21:36:38.957+09:00  INFO 32708 --- [calendar02] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-30T21:36:38.962+09:00 DEBUG 32708 --- [calendar02] [    Test worker] o.m.s.t.SpringManagedTransaction         : JDBC Connection [HikariProxyConnection@1842537555 wrapping org.postgresql.jdbc.PgConnection@764db16c] will not be managed by Spring
+2025-03-30T21:36:39.133+09:00 DEBUG 32708 --- [calendar02] [    Test worker] org.mybatis.spring.SqlSessionUtils       : Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e7cfd49]
 chiikawaはすでに登録されています
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3

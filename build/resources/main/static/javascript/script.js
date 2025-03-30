@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function(){
     let stylesheet = document.getElementById('style-sheet');
 
     if(screenWidth <= 414){
-        stylesheet.setAttribute('th:href','mobile-style.css');
+        stylesheet.setAttribute('href','/css/mobile-style.css');
     }else{
-        stylesheet.setAttribute('th:href','style.css');
+        stylesheet.setAttribute('href','/css/style.css');
     }
 
     document.addEventListener("keydown" , function(event){
