@@ -2,6 +2,16 @@
 document.addEventListener("DOMContentLoaded", function(){
     let baseUrl = window.location.origin+"/calendar";
 
+    // ページ読み込み後にスタイルシートを切り替える処理
+    let screenWidth = window.innerWidth;
+    let stylesheet = document.getElementById('style-sheet');
+
+    if(screenWidth <= 414){
+        stylesheet.setAttribute('th:href','mobile-style.css');
+    }else{
+        stylesheet.setAttribute('th:href','style.css');
+    }
+
     document.addEventListener("keydown" , function(event){
 
         let currentYear = parseInt(document.getElementById("yearSelect").value);
