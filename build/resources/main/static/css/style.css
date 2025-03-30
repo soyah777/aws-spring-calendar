@@ -218,7 +218,7 @@ li:not(.shared-todo):not(.share-to-other-user){
 }
 
 /* 🛠️ スマホ対応 */
-@media (max-width: 768px) {
+@media (max-width: 414px) {
     .weekday {
         font-size: 1rem;
         padding: 10px;
