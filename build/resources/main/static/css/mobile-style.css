@@ -8,11 +8,11 @@ body {
 
 .calendar{
     display: grid;
-    grid-template-columns: repeat(7, minmax(50px, 1fr));
-    grid-template-rows: repeat(6, minmax(50px, 1fr));
+    grid-template-columns: repeat(7, 102px);
+    grid-template-rows: repeat(6, 102px);
+    /*width: 100%; !* 横幅は画面幅に合わせる *!*/
+    height: 0;
 
-    /*width: max-content;*/
-    /*height: max-content;*/
     margin: 5px auto;
     /*padding: 10px;*/
     background: white;
@@ -63,13 +63,14 @@ select {
 }
 
 .day {
-    padding: 15px;
+    padding: 5px 0 0 5px;
     border: 1px solid black;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    font-size: 2px;
 }
 
 .day:hover {
@@ -78,7 +79,7 @@ select {
 }
 
 .day p {
-    font-size: 18px;
+    font-size: 10px;
     margin: 5px 0;
 }
 
@@ -184,7 +185,7 @@ li:not(.shared-todo):not(.share-to-other-user){
 /* 🗓️ 曜日ヘッダー */
 .weekdays {
     display: grid;
-    grid-template-columns: repeat(7, 200px);
+    grid-template-columns: repeat(7, 102px);
     background-color: #fff;
     /*color: #E5C07B;*/
     /*border-radius: 10px 10px 0 0;*/
@@ -196,8 +197,8 @@ li:not(.shared-todo):not(.share-to-other-user){
     display: flex;
     justify-content: center;  /* 中央揃え */
     /*align-items: center;*/
-    padding: 5px 0;
-    font-size: 1.2rem;
+    padding: 0 0;
+    font-size: 13px;
     font-style: italic;  /* イタリック */
 }
 
