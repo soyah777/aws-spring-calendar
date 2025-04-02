@@ -1,5 +1,6 @@
 package ngen.calendar02.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import ngen.calendar02.form.TodoForm;
 import ngen.calendar02.model.Day;
@@ -35,7 +36,15 @@ public class CalendarController {
             @RequestParam(name = "year", required = false) Integer year,
             @RequestParam(name = "month", required = false) Integer month,
             @AuthenticationPrincipal UserDetails userDetails,
+            HttpServletRequest request,
             Model model) {
+
+        // ユーザーエージェントを取得
+        String userAgent = request.getHeader("User-Agent");
+        boolean isMobile = userAgent.toLowerCase().contains("mobile");
+
+        String cssPath = isMobile ? "/css/mobile-style.css" : "/css/style.css";
+
 
         // ログインユーザーのIDを取得
         ngen.calendar02.entity.User user = userMapper.findPassword(userDetails.getUsername());
@@ -61,6 +70,7 @@ public class CalendarController {
         model.addAttribute("years", calendarService.getSelectableYears());
         model.addAttribute("months", calendarService.getSelectableMonths());
         model.addAttribute("days", days);
+        model.addAttribute("cssPath", cssPath);
 
         String selectedYearAndMonth = year.toString() + "年 " + month.toString()+ "月";
         model.addAttribute("selectedYearAndMonth", selectedYearAndMonth);
