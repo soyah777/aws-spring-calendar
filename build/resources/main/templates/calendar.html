@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link id="style-sheet" rel="stylesheet">
+    <link id="style-sheet" rel="stylesheet" th:href="@{${cssPath}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spring-Thymeleaf カレンダー</title>
@@ -24,47 +24,47 @@
 </div>
 
 <div class="calendar-container">
-<!-- 曜日ヘッダー -->
-<div class="weekdays">
-    <div class="weekday sunday">Sun</div>
-    <div class="weekday">Mon</div>
-    <div class="weekday">Tue</div>
-    <div class="weekday">Wed</div>
-    <div class="weekday">Thu</div>
-    <div class="weekday">Fri</div>
-    <div class="weekday saturday">Sat</div>
-</div>
+    <!-- 曜日ヘッダー -->
+    <div class="weekdays">
+        <div class="weekday sunday">Sun</div>
+        <div class="weekday">Mon</div>
+        <div class="weekday">Tue</div>
+        <div class="weekday">Wed</div>
+        <div class="weekday">Thu</div>
+        <div class="weekday">Fri</div>
+        <div class="weekday saturday">Sat</div>
+    </div>
 
-<div class="calendar">
-    <div class="day"
-         th:each="day:${days}"
-         th:attr="data-year=${day.year},
+    <div class="calendar">
+        <div class="day"
+             th:each="day:${days}"
+             th:attr="data-year=${day.year},
          data-month=${day.month},
          data-date=${day.date}"
-         th:classappend="|${!(day.isBlank)
+             th:classappend="|${!(day.isBlank)
          ? (day.dayOfWeek.getValue() == 6 ? 'saturday' : (day.dayOfWeek.getValue() == 7 ? 'sunday' : '')) : 'empty-day'}
              ${day.holiday != null ? ' holiday' : ''}|">
 
-        <p>
-            <span th:text="${day.date}"></span>
+            <p>
+                <span th:text="${day.date}"></span>
 
-            <span class="todo-count"
-                  th:if="${day.todoList != null and not #lists.isEmpty(day.todoList)}"
-                  th:text="'('+${day.todoList.size()}+'件)'"></span>
-        </p>
+                <span class="todo-count"
+                      th:if="${day.todoList != null and not #lists.isEmpty(day.todoList)}"
+                      th:text="'('+${day.todoList.size()}+'件)'"></span>
+            </p>
 
-        <p th:if="${day.holiday}" th:text="${day.holiday}" class="holiday"></p>
+            <p th:if="${day.holiday}" th:text="${day.holiday}" class="holiday"></p>
 
-        <ul>
-            <li th:each="todo,stat:${day.todoList}" th:if="${stat.index < 3}"
-                th:classappend="|${todo.isShared ? 'shared-todo' : ''}
+            <ul>
+                <li th:each="todo,stat:${day.todoList}" th:if="${stat.index < 3}"
+                    th:classappend="|${todo.isShared ? 'shared-todo' : ''}
                 ${todo.isShareToOtherUsers ? 'share-to-other-user' : ''}|">
-                <span th:text="${todo.todo}"></span>
-            </li>
-        </ul>
+                    <span th:text="${todo.todo}"></span>
+                </li>
+            </ul>
 
+        </div>
     </div>
-</div>
 </div>
 
 <script th:src="@{/javascript/script.js}"></script>

@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function(){
     let baseUrl = window.location.origin+"/calendar";
 
     // ページ読み込み後にスタイルシートを切り替える処理
-    let screenWidth = window.innerWidth;
-    let stylesheet = document.getElementById('style-sheet');
-
-    if(screenWidth <= 414){
-        stylesheet.setAttribute('href','/css/mobile-style.css');
-    }else{
-        stylesheet.setAttribute('href','/css/style.css');
-    }
+    // let screenWidth = window.innerWidth;
+    // let stylesheet = document.getElementById('style-sheet');
+    //
+    // if(screenWidth <= 414){
+    //     stylesheet.setAttribute('href','/css/mobile-style.css');
+    // }else{
+    //     stylesheet.setAttribute('href','/css/style.css');
+    // }
 
     document.addEventListener("keydown" , function(event){
 
