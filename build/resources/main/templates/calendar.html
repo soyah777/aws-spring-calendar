@@ -35,7 +35,7 @@
         <div class="weekday saturday">Sat</div>
     </div>
 
-    <div class="calendar">
+    <div class="calendar" th:attr="data-row-count=${rowCount}">
         <div class="day"
              th:each="day:${days}"
              th:attr="data-year=${day.year},
