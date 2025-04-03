@@ -12,7 +12,6 @@ import ngen.calendar02.service.TodoService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,13 +63,15 @@ public class CalendarController {
         }
 
         List<Day> days = calendarService.generateCalendar(year, month,userId);
+        int rowCount = (days.size() == 42) ? 6 : 5;
 
-        model.addAttribute("selectedYear", year);
+                model.addAttribute("selectedYear", year);
         model.addAttribute("selectedMonth", month);
         model.addAttribute("years", calendarService.getSelectableYears());
         model.addAttribute("months", calendarService.getSelectableMonths());
         model.addAttribute("days", days);
         model.addAttribute("cssPath", cssPath);
+        model.addAttribute("rowCount", rowCount);
 
         String selectedYearAndMonth = year.toString() + "年 " + month.toString()+ "月";
         model.addAttribute("selectedYearAndMonth", selectedYearAndMonth);

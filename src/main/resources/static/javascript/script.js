@@ -12,6 +12,23 @@ document.addEventListener("DOMContentLoaded", function(){
     //     stylesheet.setAttribute('href','/css/style.css');
     // }
 
+    
+    // カレンダー行数を5行か6行に
+    let calendar = document.querySelector(".calendar");
+    let rowCount = calendar.getAttribute("data-row-count");
+
+    if(rowCount){
+        let stylesheet = document.getElementById("style-sheet").getAttribute("href");
+
+        if(stylesheet.includes("mobile-style.css")){
+            calendar.style.gridTemplateRows = `repeat(${rowCount}, 102px)`
+        }else {
+            calendar.style.gridTemplateRows = `repeat(${rowCount}, 200px)`
+        }
+    }
+
+
+
     document.addEventListener("keydown" , function(event){
 
         let currentYear = parseInt(document.getElementById("yearSelect").value);
